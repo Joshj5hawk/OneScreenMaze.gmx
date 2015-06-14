@@ -43,7 +43,7 @@ if(os_type != os_windows)
      global.vkey_D = virtual_key_add(192, 458, width / 3, height, ord('D'));
      global.vkey_S = virtual_key_add(32, 602 , width, height / 3,ord('S'));
      
-     global.vkey_Esc = virtual_key_add(1200, 80, 80, 80, vk_escape);
+     global.vkey_Esc = virtual_key_add(1200, 16, 80, 80, vk_escape);
      global.vkey_Shift = virtual_key_add(1080, 620, 75, 75, vk_shift);
      
      //show Vkeys
@@ -54,7 +54,7 @@ if(os_type != os_windows)
      virtual_key_show(global.vkey_S);
      */
      virtual_key_show(global.vkey_Shift);
-     virtual_key_show(global.vkey_Esc);
+    // virtual_key_show(global.vkey_Esc);
 }
 </string>
           </argument>
@@ -78,12 +78,13 @@ if(os_type != os_windows)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw D-Pad
+            <string>///Draw D-Pad and other controlls
 
 display_set_gui_size(1280,720);
 if os_type != os_windows
 {
-     draw_sprite_ext(spr_FourDirection, 0, 32, 468, 1, 1, 0, c_white, 0.5); 
+     draw_sprite_ext(spr_FourDirection, 0, 32, 468, 1, 1, 0, c_white, 0.5);
+     draw_sprite(spr_Pause, 0, 1200, 16);
 }
 </string>
           </argument>

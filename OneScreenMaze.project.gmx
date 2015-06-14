@@ -16,6 +16,7 @@
       <sprite>sprites\spr_PlayerUp</sprite>
       <sprite>sprites\spr_PlayerLeft</sprite>
       <sprite>sprites\spr_Player_Collision</sprite>
+      <sprite>sprites\gameIcon</sprite>
     </sprites>
     <sprites name="Menu Icons">
       <sprite>sprites\spr_Play</sprite>
@@ -40,6 +41,7 @@
     </sprites>
     <sprites name="Controls">
       <sprite>sprites\spr_FourDirection</sprite>
+      <sprite>sprites\spr_Pause</sprite>
     </sprites>
     <sprites name="Keys">
       <sprite>sprites\spr_Key</sprite>
@@ -117,6 +119,7 @@
     <room>rooms\rm_Maze6</room>
     <room>rooms\rm_Maze7</room>
     <room>rooms\rm_FinalRoom</room>
+    <room>rooms\rm_Maze1000</room>
     <rooms name="Menus">
       <room>rooms\rm_PauseMenu</room>
       <room>rooms\rm_LoadRoom</room>
