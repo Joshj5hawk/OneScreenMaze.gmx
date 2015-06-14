@@ -163,7 +163,7 @@ if !place_free(x+hspeed,y+vspeed)
             <string>///Health Loss
 if(obj_Player.health &lt;= 0)
      {
-          room_goto(rm_EndCredits);
+          room_goto(rm_MainMenu);
      }
 </string>
           </argument>
