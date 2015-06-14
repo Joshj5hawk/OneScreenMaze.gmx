@@ -78,7 +78,7 @@ image_index = (0);
 image_index = (0);
 if(global.canClick)
 {
-    // game_load("save.sav");
+     game_load("save.sav");
 }
 // room_goto(rm_LoadRoom);
 </string>
