@@ -58,6 +58,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_endcredits</font>
+    <font>fonts\fnt_Timer</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_Player</object>

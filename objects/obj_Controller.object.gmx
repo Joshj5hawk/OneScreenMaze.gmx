@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -60,6 +60,100 @@ if(os_type != os_windows)
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initialize Timers
+global.seconds = 0;
+global.minutes = 0;
+global.hours = 0;
+
+global.lastSeconds = 0;
+global.lastMinutes = 0;
+global.lastHours = 0;
+
+global.canCount = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Increment Timer
+if(global.canCount = true)
+{
+     global.seconds += 1/room_speed;
+}
+
+if((global.seconds &lt; 60) &amp;&amp; (global.seconds &gt; 59.9))
+{
+     global.seconds = 0;
+     global.minutes += 1;
+}
+if(global.minutes == 60)
+{
+     global.minutes = 0;
+     global.hours += 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Reset Timers
+global.seconds = 0;
+global.minutes = 0;
+global.hours = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="64">
       <action>
@@ -85,6 +179,91 @@ if os_type != os_windows
 {
      draw_sprite_ext(spr_FourDirection, 0, 32, 468, 1, 1, 0, c_white, 0.5);
      draw_sprite(spr_Pause, 0, 1200, 16);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Current Timer
+draw_set_font(fnt_Timer);
+draw_set_colour(c_black);
+draw_set_halign(fa_center);
+//00:00:00
+//hh:mm:ss
+if(global.seconds &lt; 10) &amp;&amp; (global.minutes &lt; 10)
+{
+     draw_text(1056, 0, "Current Time " + string(global.hours) + ":0" + string(global.minutes) + ":0" + string(global.seconds));
+}
+else if(global.seconds &gt;= 10) &amp;&amp; (global.minutes &gt;= 10)
+{
+     draw_text(1056, 0, "Current Time " + string(global.hours) + ":" + string(global.minutes) + ":" + string(global.seconds));
+}
+else if(global.seconds &lt; 10) &amp;&amp; (global.minutes &gt;= 10)
+{
+     draw_text(1056, 0, "Current Time " + string(global.hours) + ":" + string(global.minutes) + ":0" + string(global.seconds));
+}
+else if(global.seconds &gt;= 10) &amp;&amp; (global.minutes &lt; 10)
+{
+     draw_text(1056, 0, "Current Time " + string(global.hours) + ":0" + string(global.minutes) + ":" + string(global.seconds));
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw Last Room Time
+///Draw Last Timer
+draw_set_font(fnt_Timer);
+draw_set_colour(c_black);
+draw_set_halign(fa_center);
+//00:00:00
+//hh:mm:ss
+if(global.lastSeconds &lt; 10) &amp;&amp; (global.lastMinutes &lt; 10)
+{
+     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":0" + string(global.lastMinutes) + ":0" + string(global.lastSeconds));
+}
+else if(global.lastSeconds &gt;= 10) &amp;&amp; (global.lastMinutes &gt;= 10)
+{
+     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":" + string(global.lastMinutes) + ":" + string(global.lastSeconds));
+}
+else if(global.lastSeconds &lt; 10) &amp;&amp; (global.lastMinutes &gt;= 10)
+{
+     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":" + string(global.lastMinutes) + ":0" + string(global.lastSeconds));
+}
+else if(global.lastSeconds &gt;= 10) &amp;&amp; (global.lastMinutes &lt; 10)
+{
+     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":0" + string(global.lastMinutes) + ":" + string(global.lastSeconds));
 }
 </string>
           </argument>

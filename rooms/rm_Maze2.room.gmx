@@ -154,9 +154,7 @@ with(obj_Player)
     <instance objName="obj_WallBlue" x="1216" y="512" name="inst_2DE0DF6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="1152" y="512" name="inst_56A6999E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="1088" y="512" name="inst_0D9D8A51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Controller" x="128" y="128" name="inst_C1F14A55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="64" y="128" name="inst_556E7C98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_WallBlue" x="128" y="128" name="inst_7E1771AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="192" y="128" name="inst_7D335EE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="256" y="128" name="inst_C224BAA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="256" y="320" name="inst_36219678" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

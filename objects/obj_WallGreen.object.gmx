@@ -53,6 +53,7 @@ image_speed = 1;
             <string>if(image_index == (15))
                {
                 image_speed = 0;
+                global.canMove = true;
                }
 if(image_index == (0))
                {
