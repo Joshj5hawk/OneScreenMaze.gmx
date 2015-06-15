@@ -48,6 +48,8 @@
       <sprite>sprites\spr_KeyBlueWall</sprite>
       <sprite>sprites\spr_KeyGreenWall</sprite>
     </sprites>
+    <sprite>sprites\spr_DarkRoom</sprite>
+    <sprite>sprites\spr_DarkSee</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -107,6 +109,7 @@
       <object>objects\obj_Wall</object>
       <object>objects\obj_OutsideWall</object>
     </objects>
+    <object>objects\obj_DarkSee</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Initialize</room>
