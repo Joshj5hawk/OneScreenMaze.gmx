@@ -110,6 +110,7 @@
       <object>objects\obj_OutsideWall</object>
     </objects>
     <object>objects\obj_DarkSee</object>
+    <object>objects\obj_CreateDarkRoom</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Initialize</room>
