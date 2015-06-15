@@ -485,6 +485,7 @@ global.startingPosY = obj_Player.y;</code>
     <instance objName="obj_WallGreen" x="2944" y="1664" name="inst_9CE6B8CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallGreen" x="2880" y="1664" name="inst_710CBB51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="2368" y="704" name="inst_C32FB7F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Controller" x="0" y="0" name="inst_BC19EFA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

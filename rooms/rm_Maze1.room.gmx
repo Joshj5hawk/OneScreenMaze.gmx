@@ -290,6 +290,7 @@ if(room = rm_StartingRoom)
     <instance objName="obj_WallGreenLocked" x="256" y="320" name="inst_B6AAF742" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallGreenLocked" x="256" y="384" name="inst_F60BA4BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallGreenLocked" x="256" y="448" name="inst_B5C9873A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Controller" x="128" y="64" name="inst_8BBEF8A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

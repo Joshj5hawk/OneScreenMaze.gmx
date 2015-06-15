@@ -95,6 +95,7 @@ with(obj_Player)
     <instance objName="obj_WallBlue" x="512" y="128" name="inst_A543E88C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="512" y="192" name="inst_195ACE55" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_WallBlue" x="128" y="128" name="inst_CF123068" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Controller" x="0" y="64" name="inst_41F488AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

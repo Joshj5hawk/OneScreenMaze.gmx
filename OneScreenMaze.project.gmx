@@ -61,8 +61,8 @@
     <font>fonts\fnt_Timer</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_Player</object>
     <object>objects\obj_Controller</object>
+    <object>objects\obj_Player</object>
     <objects name="Menu">
       <object>objects\obj_Menu</object>
       <object>objects\obj_PauseMenu</object>
