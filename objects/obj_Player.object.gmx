@@ -70,6 +70,7 @@ viewX = view_xview[0];
 viewY = view_yview[0];
 
 global.canSeeInDark = true;
+global.debugMode = false;
 </string>
           </argument>
         </arguments>
@@ -313,6 +314,60 @@ if keyboard_check(vk_f12)
      {
           room_goto(rm_Maze1000);
      }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Debug Mode
+if(keyboard_check_pressed(vk_f1))
+{
+     global.debugMode = true;
+}
+if(keyboard_check_pressed(vk_f2))
+{
+     global.debugMode = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Resart Level
+if(keyboard_check_pressed(ord('R')))
+{
+     room_restart();
+}
 </string>
           </argument>
         </arguments>

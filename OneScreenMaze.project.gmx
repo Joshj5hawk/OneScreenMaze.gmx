@@ -42,6 +42,7 @@
     <sprites name="Controls">
       <sprite>sprites\spr_FourDirection</sprite>
       <sprite>sprites\spr_Pause</sprite>
+      <sprite>sprites\spr_Restart</sprite>
     </sprites>
     <sprites name="Keys">
       <sprite>sprites\spr_Key</sprite>
