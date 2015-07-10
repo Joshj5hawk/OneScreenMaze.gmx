@@ -658,13 +658,13 @@ if os_type != os_windows
           <argument>
             <kind>1</kind>
             <string>///FPS And Health
-draw_set_font(fnt_endcredits)
+draw_set_font(fnt_Timer)
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_text(8, 8,"FPS: " + string(fps));
-draw_text(8, 19, "Health: " + string(health));
-draw_text(8, 30, "Lives: " + string(lives));
-draw_text(8, 41, "Currently in Maze " + string(room - 2));
+//draw_text(8, 19, "Health: " + string(health));
+//draw_text(8, 30, "Lives: " + string(lives));
+draw_text(8, 20, "Currently in Maze " + string(room - 2));
 </string>
           </argument>
         </arguments>
