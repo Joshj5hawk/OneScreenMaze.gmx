@@ -366,7 +366,9 @@ if(keyboard_check_pressed(vk_f2))
             <string>///Resart Level
 if(keyboard_check_pressed(ord('R')))
 {
-     room_restart();
+    obj_Player.x = global.startingPosX;
+    obj_Player.y = global.startingPosY;
+    room_restart();
 }
 </string>
           </argument>
@@ -657,7 +659,7 @@ if os_type != os_windows
             <kind>1</kind>
             <string>///FPS And Health
 draw_set_font(fnt_endcredits)
-draw_set_color(c_black);
+draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_text(8, 8,"FPS: " + string(fps));
 draw_text(8, 19, "Health: " + string(health));
@@ -685,8 +687,8 @@ draw_text(8, 41, "Currently in Maze " + string(room - 2));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw HealthBar
-draw_healthbar(x -16, y - 36, x + 16, y - 30, health, c_black, c_red, c_green, 0, true, true);
+            <string>///Draw HealthBar Re-Enable when health is relevent
+//draw_healthbar(x -16, y - 36, x + 16, y - 30, health, c_black, c_red, c_green, 0, true, true);
 draw_sprite(sprite_index, -1, x, y);
 </string>
           </argument>

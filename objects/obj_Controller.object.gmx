@@ -196,7 +196,7 @@ display_set_gui_size(1280,720);
             <kind>1</kind>
             <string>///Draw Current Timer
 draw_set_font(fnt_Timer);
-draw_set_colour(c_navy);
+draw_set_colour(c_white);
 draw_set_halign(fa_center);
 //00:00:00
 //hh:mm:ss
@@ -239,7 +239,7 @@ else if(global.seconds &gt;= 10) &amp;&amp; (global.minutes &lt; 10)
             <string>///Draw Last Room Time
 ///Draw Last Timer
 draw_set_font(fnt_Timer);
-draw_set_colour(c_navy);
+draw_set_colour(c_white);
 draw_set_halign(fa_center);
 //00:00:00
 //hh:mm:ss

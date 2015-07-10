@@ -57,7 +57,6 @@
   <scripts name="scripts">
     <script>scripts\scr_PlayerMovement.gml</script>
     <script>scripts\scr_ToDoList.gml</script>
-    <script>scripts\scr_CheckDirection.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_endcredits</font>
