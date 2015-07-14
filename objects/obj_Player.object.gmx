@@ -528,6 +528,32 @@ global.lastHours = global.hours;
 
 //Stop Counter
 global.canCount = false;
+
+//Get Current Time
+currentTime = global.hours * 3600 + global.minutes * 60 + global.seconds;
+
+//Read Current Best Time
+ini_open("records.sav");
+var roomBestTime = ini_read_real("Times", room_get_name(room), 0);
+ini_close();
+
+//Save better time to .ini
+if(roomBestTime == 0)
+{
+
+    ini_open("records.sav");
+    ini_write_real("Times", room_get_name(room), currentTime);
+    ini_close();
+
+}
+else if(currentTime &lt; roomBestTime)
+{
+
+    ini_open("records.sav");
+    ini_write_real("Times", room_get_name(room), currentTime);
+    ini_close();
+
+}
 </string>
           </argument>
         </arguments>
