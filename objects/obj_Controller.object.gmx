@@ -227,19 +227,19 @@ draw_set_halign(fa_center);
 //hh:mm:ss
 if(global.seconds &lt; 10) &amp;&amp; (global.minutes &lt; 10)
 {
-     draw_text(1056, 0, "Current Time " + string(global.hours) + ":0" + string(global.minutes) + ":0" + string(global.seconds));
+     draw_text(1000, 0, "Current Time " + string(global.hours) + ":0" + string(global.minutes) + ":0" + string(global.seconds));
 }
 else if(global.seconds &gt;= 10) &amp;&amp; (global.minutes &gt;= 10)
 {
-     draw_text(1056, 0, "Current Time " + string(global.hours) + ":" + string(global.minutes) + ":" + string(global.seconds));
+     draw_text(1000, 0, "Current Time " + string(global.hours) + ":" + string(global.minutes) + ":" + string(global.seconds));
 }
 else if(global.seconds &lt; 10) &amp;&amp; (global.minutes &gt;= 10)
 {
-     draw_text(1056, 0, "Current Time " + string(global.hours) + ":" + string(global.minutes) + ":0" + string(global.seconds));
+     draw_text(1000, 0, "Current Time " + string(global.hours) + ":" + string(global.minutes) + ":0" + string(global.seconds));
 }
 else if(global.seconds &gt;= 10) &amp;&amp; (global.minutes &lt; 10)
 {
-     draw_text(1056, 0, "Current Time " + string(global.hours) + ":0" + string(global.minutes) + ":" + string(global.seconds));
+     draw_text(1000, 0, "Current Time " + string(global.hours) + ":0" + string(global.minutes) + ":" + string(global.seconds));
 }
 </string>
           </argument>
@@ -270,19 +270,19 @@ draw_set_halign(fa_center);
 //hh:mm:ss
 if(global.lastSeconds &lt; 10) &amp;&amp; (global.lastMinutes &lt; 10)
 {
-     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":0" + string(global.lastMinutes) + ":0" + string(global.lastSeconds));
+     draw_text(1000, 16, "Last Room Time " + string(global.lastHours) + ":0" + string(global.lastMinutes) + ":0" + string(global.lastSeconds));
 }
 else if(global.lastSeconds &gt;= 10) &amp;&amp; (global.lastMinutes &gt;= 10)
 {
-     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":" + string(global.lastMinutes) + ":" + string(global.lastSeconds));
+     draw_text(1000, 16, "Last Room Time " + string(global.lastHours) + ":" + string(global.lastMinutes) + ":" + string(global.lastSeconds));
 }
 else if(global.lastSeconds &lt; 10) &amp;&amp; (global.lastMinutes &gt;= 10)
 {
-     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":" + string(global.lastMinutes) + ":0" + string(global.lastSeconds));
+     draw_text(1000, 16, "Last Room Time " + string(global.lastHours) + ":" + string(global.lastMinutes) + ":0" + string(global.lastSeconds));
 }
 else if(global.lastSeconds &gt;= 10) &amp;&amp; (global.lastMinutes &lt; 10)
 {
-     draw_text(1056, 16, "Last Time " + string(global.lastHours) + ":0" + string(global.lastMinutes) + ":" + string(global.lastSeconds));
+     draw_text(1000, 16, "Last Room Time " + string(global.lastHours) + ":0" + string(global.lastMinutes) + ":" + string(global.lastSeconds));
 }
 </string>
           </argument>
@@ -310,30 +310,30 @@ draw_set_font(fnt_Timer);
 draw_set_colour(c_white);
 draw_set_halign(fa_center);
 
-draw_text(1056, 48, string(global.bestTime));
+draw_text(1000, 48, "Time in .ini " + string(global.bestTime));
 
 
-var global.bestSeconds = 34;
-var global.bestMinutes = 8;
-var global.bestHours = 3;
+global.bestHours = (global.bestTime div 3600);
+global.bestMinutes = (global.bestTime - (global.bestHours * 3600)) div 60;
+global.bestSeconds = global.bestTime - (global.bestHours * 3600) - (global.bestMinutes * 60);
 
 //00:00:00
 //hh:mm:ss
 if(global.bestSeconds &lt; 10) &amp;&amp; (global.bestMinutes &lt; 10)
 {
-     draw_text(1056, 32, "Best Time " + string(global.bestHours) + ":0" + string(global.bestMinutes) + ":0" + string(global.bestSeconds));
+     draw_text(1000, 32, "Best Time " + string(global.bestHours) + ":0" + string(global.bestMinutes) + ":0" + string(global.bestSeconds));
 }
 else if(global.bestSeconds &gt;= 10) &amp;&amp; (global.bestMinutes &gt;= 10)
 {
-     draw_text(1056, 32, "Best Time " + string(global.bestHours) + ":" + string(global.bestMinutes) + ":" + string(global.bestSeconds));
+     draw_text(1000, 32, "Best Time " + string(global.bestHours) + ":" + string(global.bestMinutes) + ":" + string(global.bestSeconds));
 }
 else if(global.bestSeconds &lt; 10) &amp;&amp; (global.bestMinutes &gt;= 10)
 {
-     draw_text(1056, 32, "Best Time " + string(global.bestHours) + ":" + string(global.bestMinutes) + ":0" + string(global.bestSeconds));
+     draw_text(1000, 32, "Best Time " + string(global.bestHours) + ":" + string(global.bestMinutes) + ":0" + string(global.bestSeconds));
 }
 else if(global.bestSeconds &gt;= 10) &amp;&amp; (global.bestMinutes &lt; 10)
 {
-     draw_text(1056, 32, "Best Time " + string(global.bestHours) + ":0" + string(global.bestMinutes) + ":" + string(global.bestSeconds));
+     draw_text(1000, 32, "Best Time " + string(global.bestHours) + ":0" + string(global.bestMinutes) + ":" + string(global.bestSeconds));
 }
 </string>
           </argument>
