@@ -285,8 +285,21 @@ if(keyboard_check_released(vk_f6))
             <string>///Saving
 if(keyboard_check(vk_escape))
      {
-          game_save("save.sav");
-          global.canClick = false;
+          if(file_exists("save.sav")) file_delete("save.sav");
+          ini_open("save.sav");
+          var savedRoom = room;
+          var posX = obj_Player.x;
+          var posY = obj_Player.y;
+          var sec = global.seconds;
+          var mn = global.minutes;
+          var hr = global.hours;
+          ini_write_real("Saves", "Room", savedRoom);
+          ini_write_real("Location", "PlayerX", posX);
+          ini_write_real("Location", "PlayerY", posY);
+          ini_write_real("Time", "Seconds", sec)
+          ini_write_real("Time", "Minutes", mn)
+          ini_write_real("Time", "Hours", hr)
+          ini_close();
           room_goto(rm_MainMenu);
      }
 </string>

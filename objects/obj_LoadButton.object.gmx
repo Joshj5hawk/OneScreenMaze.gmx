@@ -78,7 +78,23 @@ image_index = (0);
 image_index = (0);
 if(global.canClick)
 {
-     game_load("save.sav");
+     ///Load Game and Set Icon Back
+     if(file_exists("save.sav"))
+          {
+               ini_open("save.sav");
+               var loadedRoom = ini_read_real("Saves", "Room", rm_MainMenu);
+               var posX = ini_read_real("Location", "PlayerX", 0);
+               var posY = ini_read_real("Location", "PlayerY", 0);
+               var sec = ini_read_real("Time", "Seconds", 999);
+               var mn = ini_read_real("Time", "Minuets", 999);
+               var hr = ini_read_real("Time", "Hours", 999);
+               ini_close();
+               instance_create(posX, posY, obj_Player);
+               global.seconds = sec;
+               global.minutes = mn;
+               global.hours = hr;
+               room_goto(loadedRoom);
+          }
 }
 // room_goto(rm_LoadRoom);
 </string>
@@ -103,8 +119,9 @@ if(global.canClick)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Make Button Look Pressed
+            <string>///Set index back to 0 and Load Game (if available)
 image_index = (1);
+// room_goto(rm_LoadRoom);
 </string>
           </argument>
         </arguments>

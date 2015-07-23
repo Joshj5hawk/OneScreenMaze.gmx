@@ -86,14 +86,17 @@ if(!file_exists("save1.sav"))
           <argument>
             <kind>1</kind>
             <string>///Load Game and Set Icon Back
-if(!file_exists("save1.sav"))
+if(file_exists("save.sav"))
      {
           obj_Load1.image_index = (1);
+          ini_open("save.sav");
+          var loadedRoom = ini_read_real("Saves", "Room", rm_MainMenu);
+          ini_close();     
+          room_goto(loadedRoom);
      }
      else
      {
-          game_load("save1.sav");
-          obj_Load1.image_index = (0);
+          obj_Load1.image_index = (1);
      }
 </string>
           </argument>
